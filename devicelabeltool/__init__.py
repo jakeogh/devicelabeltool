@@ -1,1 +1,1 @@
-from .devicelabeltool import write
+from .devicelabeltool import write as write
