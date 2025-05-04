@@ -122,12 +122,15 @@ def write(
         gvd=gvd,
     )
 
-    assert path_is_block_special(device)
+    assert path_is_block_special(device, symlink_ok=True)
     assert not block_special_path_is_mounted(
         device,
     )
     if not force:
-        warn((device,))
+        warn(
+            (device,),
+            symlink_ok=True,
+        )
 
     parted_command = sh.Command("parted")
     parted_command = parted_command.bake(device.as_posix())
