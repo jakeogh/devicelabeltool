@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 
-import fastentrypoints
 from setuptools import find_packages, setup
 
 dependencies = ["click"]
